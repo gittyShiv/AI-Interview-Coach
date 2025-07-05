@@ -1,0 +1,93 @@
+:root {
+  --bg-main: #181a1b;
+  --bg-card: #222426;
+  --neon-green: #8ef161;
+  --text-main: #f5f5f7;
+  --text-muted: #b3b3b3;
+  --accent: #1e2b23;
+  --shadow: 0 4px 32px 0 rgba(0,0,0,0.18);
+  --border-radius: 18px;
+}
+
+body {
+  background: var(--bg-main);
+  color: var(--text-main);
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4 {
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+a {
+  color: var(--neon-green);
+  text-decoration: none;
+}
+
+.button-main {
+  background: var(--neon-green);
+  color: #111;
+  border: none;
+  border-radius: var(--border-radius);
+  padding: 0.7em 2em;
+  font-size: 1.2em;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  transition: background 0.2s;
+}
+.button-main:hover {
+  background: #b8ff7f;
+}
+
+.card {
+  background: var(--bg-card);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  padding: 1.8em 1.4em;
+  margin: 1em 0;
+}
+
+input, textarea {
+  background: #27292a;
+  color: var(--text-main);
+  border: 1px solid #333;
+  border-radius: 14px;
+  padding: 0.8em 1em;
+  font-size: 1em;
+  margin: 0.3em 0;
+  width: 100%;
+  outline: none;
+}
+input:focus, textarea:focus {
+  border-color: var(--neon-green);
+}
+
+.modal {
+  background: var(--bg-card);
+  color: var(--text-main);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  padding: 2em;
+  position: fixed;
+  max-width: 400px;
+  width: 90vw;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.overlay {
+  position: fixed;
+  left: 0; top: 0; right: 0; bottom: 0;
+  background: rgba(20,20,20,0.8);
+  z-index: 9;
+}
+
+@media (max-width: 600px) {
+  .modal { max-width: 95vw; }
+}
